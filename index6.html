@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive Bootstrap Layout Fixed</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #ff53a9;
+    }
+
+    .box {
+      color: white;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .fs-3 {
+      font-size: 2.2rem; 
+    }
+
+    .header  { background-color: #24fafa; }
+    .aside   { background-color: #4955f8; }
+    .article { background-color: #f03939; }
+    .image   { background-color: #c2d2da; min-height: 60px; height: 8vh; }
+
+    .footer  { background-color: #24fafa; }
+
+    .vh-15 { height: 15vh !important; }
+    .vh-55 { height: 55vh !important; }
+
+    @media (max-width: 576px) {
+      .vh-xs-10 { height: 10vh !important; }
+      .vh-xs-20 { height: 20vh !important; }
+      .vh-xs-50 { height: 50vh !important; }
+      .vh-xs-70 { height: 70vh !important; }
+      .fs-3 { font-size: 1.5rem; } 
+    }
+  </style>
+</head>
+<body class="p-4">
+
+  <div class="container-fluid h-100">
+
+    
+    <div class="row mb-3 vh-15 vh-xs-20">
+      <div class="col-12 d-flex align-items-center justify-content-center box header">
+        Header
+      </div>
+    </div>
+
+    
+    <div class="row mb-3 gx-3 vh-55 vh-xs-70">
+
+      
+      <div class="col-12 col-md-3 order-1 order-md-1 d-flex align-items-center justify-content-center box aside vh-xs-20 mb-3 mb-md-0">
+        Aside
+      </div>
+
+      
+      <div class="col-12 col-md-9 order-2 order-md-2 d-flex flex-row flex-sm-column justify-content-sm-end justify-content-center align-items-center box article p-2 vh-xs-50 fs-3">
+        
+        <div class="text-center w-100 mb-2">Article</div>
+
+        <div class="row w-100 g-2">
+          <div class="col-12 col-sm-4">
+            <div class="d-flex align-items-center justify-content-center box image">Image</div>
+          </div>
+          <div class="col-12 col-sm-4">
+            <div class="d-flex align-items-center justify-content-center box image">Image</div>
+          </div>
+          <div class="col-12 col-sm-4">
+            <div class="d-flex align-items-center justify-content-center box image">Image</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+   
+    <div class="row mt-5 vh-15 vh-xs-10">
+      <div class="col-12 d-flex align-items-center justify-content-center box footer">
+        Footer
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

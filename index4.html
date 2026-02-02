@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bootstrap Layout</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta charset="UTF-8">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+  
+    .box {
+      color: white;
+      display:flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+    .header    { background-color: #00c2c2; }
+    .nav       { background-color: #28a745; }
+    .aside     { background-color: #6dd47e; }
+    .content   { background-color: #1995d1; }
+    .section   { background-color: #004e89; }
+    .footer    { background-color: #00c2c2; }
+
+    .vh-15 {height: 15vh !important;}
+    .vh-55 {height: 55vh !important;}
+
+    @media (max-width:576px){
+        .vh-xs-20 {
+               height: 20vh !important;
+        }
+
+         .vh-xs-40 {
+               height: 40vh !important;
+        }
+
+    }
+  </style>
+</head>
+<body class="bg-info-subtle p-4">
+
+  <div class="container-fluid h-100">
+
+    
+    <div class="row mb-3 vh-15 vh-xs-20">
+      <div class="col-12 box header">Header</div>
+    </div>
+
+    
+    <div class="row my-3 vh-15 vh-xs-20">
+      <div class="col-12 box nav">Navigation</div>
+    </div>
+
+ 
+    <div class="row mb-3 vh-55 vh-xs-40 ">
+      <div class="col-12 col-sm-3 mb-3 mb-sm-0 box aside vh-xs-20">Aside</div>
+      <div class="col-12 col-sm-9">
+        <div class="row ps-sm-3 vh-55 vh-xs-20">
+          <div class="col-12 box content mb-3 ">Content</div>
+          <div class="col-12 box section mb-3 mb-sm-0 ">Section</div>
+        </div>
+      </div>
+    </div>
+
+   
+    <div class="row mb-3 mt-3 vh-15 vh-xs-20 ">
+      <div class="col-12 box footer">Footer</div>
+    </div>
+
+  </div>
+
+
+
+</body>
+</html>
